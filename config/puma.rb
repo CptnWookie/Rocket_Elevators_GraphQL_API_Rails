@@ -15,9 +15,14 @@ on_worker_boot do
     adapter: "mysql2",
     encoding: "utf8",
     pool: ENV.fetch("RAILS_MAX_THREADS") { 5 },
-    username: "codeboxx",
-    password: "Codeboxx1!",
-    host: "codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com",
-    database: "Alexandre_Leblanc"
+    # username: "codeboxx",
+    # password: "Codeboxx1!",
+    # host: "codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com",
+    # database: "Alexandre_Leblanc"
+    username: <% ENV['USERNAME'] %>
+    password: <% ENV['PASSWORD'] %>
+    host: <% ENV['MYSQL_HOST'] %>
+    port: <% ENV['MYSQL_PORT'] %>
+    database: <% ENV['MYSQL_DB'] %>
   )
 end

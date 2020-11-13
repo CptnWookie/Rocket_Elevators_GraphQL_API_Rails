@@ -13,12 +13,12 @@ default: &default
 
 development:
   <<: *default
-  database: ALeblanc_dwh
+  database: <% ENV['POSTGRES_DB'] %>
 
 test:
   <<: *default
-  database: ALeblanc_dwh
+  database: <% ENV['POSTGRES_DB'] %>
 
 production:
   <<: *default
-  database: ALeblanc_dwh
+  database: <% ENV['POSTGRES_DB'] %>
