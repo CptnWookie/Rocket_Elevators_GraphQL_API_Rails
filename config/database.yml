@@ -10,19 +10,25 @@
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
 default: &default
-  adapter: mysql2
-  encoding: utf8
+  # adapter: mysql2
+  # encoding: utf8
+  # username: codeboxx
+  # password: Codeboxx1!
+  # host: codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com
+  # port: 3306
+  # url: <%= ENV['MYSQL_DB_URL'] %>
+  adapter: <% ENV['MYSQL_ADAPTER'] %>
+  encoding: <% ENV['MYSQL_ENCODING'] %>
+  username: <% ENV['USERNAME'] %>
+  password: <% ENV['PASSWORD'] %>
+  host: <% ENV['MYSQL_HOST'] %>
+  port: <% ENV['MYSQL_PORT'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: SimpleYellow
-  socket: /var/run/mysqld/mysqld.sock
-
+  
 development:
   <<: *default
-  database: app_development
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
+  database: <% ENV['MYSQL_DB'] %>
+
 test:
   <<: *default
   database: app_test

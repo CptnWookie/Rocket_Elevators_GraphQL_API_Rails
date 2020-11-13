@@ -9,5 +9,10 @@ module Types
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :user_id, Integer, null: true
+
+    field :fact_interventions, [Types::FactInterventionType], null: false    
+    def fact_interventions      
+      object.fact_interventions   
+    end
   end
 end
