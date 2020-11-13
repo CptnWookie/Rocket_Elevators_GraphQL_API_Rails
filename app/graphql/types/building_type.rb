@@ -14,5 +14,15 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :building_detail_id, Integer, null: true
     field :address_id, Integer, null: true
+  
+  
+    field :customer, Types::CustomerType, null:true
+   def customer
+     Customer.where(id: object.customer_id)[0]
+   end
+  
+  
+  
   end
+
 end
