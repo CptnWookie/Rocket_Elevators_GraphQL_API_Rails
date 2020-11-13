@@ -14,19 +14,28 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :building_detail_id, Integer, null: true
     field :address_id, Integer, null: true
-  
-  
-    field :customer, Types::CustomerType, null:true
+ 
+
+  ###  join Costumers and get one only item
+   field :customer, Types::CustomerType, null:true
+
    def customer
-     Customer.where(id: object.customer_id)[0]
+    Customer.where(id: object.customer_id).first
    end
-  
-   field :address, Types::AddressType, null:true
+
+    #  join Factintervention and get one only item
+    field :fact_interventions, [Types::FactInterventionType], null: false    
+    def fact_interventions      
+      object.fact_interventions   
+      # FactIntervention.where(building_id: object.id)   
+    end
+    ###  join adress and get one only item
+    field :address, Types::AddressType, null:true
     def address
     Address.where(id: object.address_id).first
     end
-  
-  
+
+
   end
 
 end
