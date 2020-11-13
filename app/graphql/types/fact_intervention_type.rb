@@ -34,6 +34,10 @@ module Types
     def address
      Address.where(id: object.building_id)[0]
     end
-    
+
+    field :buildingDetail, Types::BuildingDetailType, null:true
+    def buildingDetail
+      BuildingDetail.where(id: object.building_id)[0]
+    end
   end
 end
