@@ -1,15 +1,15 @@
 default: &default
-  adapter: postgresql
-  encoding: unicode
+  # adapter: postgresql
+  # encoding: unicode
   # username: codeboxx
   # password: Codeboxx1!
   # host: codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  #url: <%= ENV['POSTGRES_DB_URL'] %>
+  adapter: <% ENV['POSTGRES_ADAPTER'] %>
+  encoding: <% ENV['POSTGRES_ENCODING'] %>
   username: <% ENV['USERNAME'] %>
   password: <% ENV['PASSWORD'] %>
   host: <% ENV['POSTGRES_HOST'] %>
-  port: <% ENV['POSTGRES_PORT'] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
