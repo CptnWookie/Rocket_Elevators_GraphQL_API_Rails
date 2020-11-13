@@ -4,11 +4,11 @@ default: &default
   # username: codeboxx
   # password: Codeboxx1!
   # host: codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com
-  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   #url: <%= ENV['POSTGRES_DB_URL'] %>
-  username: ENV['USERNAME'] %>
-  password: ENV['PASSWORD'] %>
-  host: ENV['POSTGRES_HOST'] %>
+  username: <% ENV['USERNAME'] %>
+  password: <% ENV['PASSWORD'] %>
+  host: <% ENV['POSTGRES_HOST'] %>
   #port: ENV['POSTGRES_PORT'] %>
 
 development:
