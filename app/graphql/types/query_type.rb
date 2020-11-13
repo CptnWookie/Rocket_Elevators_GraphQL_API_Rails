@@ -37,10 +37,43 @@ module Types
     end
 
 
+    field :fact_interventions, [Types::FactInterventionType], null: false
 
+    def fact_interventions
+      FactIntervention.all
+    end
 
+    field :building, [Types::BuildingType], null: false
 
+    def building
+      Building.all
+    end
 
+    field :employees, [Types::EmployeeType], null: false
+
+    def employees
+      Employee.all
+    end
+    
+    field :columns, [Types::ColumnType], null: false
+
+    def columns
+      Column.all
+    end
+
+    field :buildingDetails, [Types::BuildingDetailType], null: false
+
+    def buildingDetails
+      BuildingDetail.all
+    end
+
+    field :battery, [Types::BatteryType], null: false
+
+    def battery
+      Battery.all
+    end
+    
+    
   end
 end
 
