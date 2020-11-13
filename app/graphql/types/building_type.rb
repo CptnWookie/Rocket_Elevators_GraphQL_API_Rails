@@ -29,9 +29,6 @@ module Types
       object.fact_interventions   
       # FactIntervention.where(building_id: object.id)   
     end
-
-  
-
     ###  join adress and get one only item
     field :address, Types::AddressType, null:true
     def address
