@@ -1,10 +1,16 @@
 
 module Types
   class QueryType < Types::BaseObject
-    field :elevators,
-          [Types::ElevatorType],
-          null: false,
-          description: "Returns a list of items in the martian library"
+    # users
+   field :users, [Types::UserType], null:false
+
+  def users
+    User.all
+  end
+  # /user/:id
+  field :user, Types::UserType, null: false do
+    argument :id, ID, required: true
+  end
 
     def elevators
       Elevator.all
