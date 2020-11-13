@@ -3,10 +3,11 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: codeboxx
-  password: Codeboxx1!
-  host: codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com
-  port: 3306
+  # username: codeboxx
+  # password: Codeboxx1!
+  # host: codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com
+  # port: 3306
+  url: <%= ENV['MYSQL_DB_URL'] %>
   
 development:
   <<: *default
