@@ -8,8 +8,6 @@ namespace :dwh do
     Second::Base.connection.execute('TRUNCATE fact_elevators RESTART IDENTITY')
     Second::Base.connection.execute('TRUNCATE fact_interventions RESTART IDENTITY')
 
-    
-
     # NOTE: If you add another function to the task, wrap it with begin and rescue to catch the exception so that Rake can still run without stopping
     # like so: 
 
@@ -46,9 +44,7 @@ namespace :dwh do
     begin
     Dwh::Sync.sync_fact_interventions
     rescue => exception
-      puts "Warning: " + exception.to_s + " - Task continuing..."
+       puts "Warning: " + exception.to_s + " - Task continuing..."
     end
-    
-
   end
 end
