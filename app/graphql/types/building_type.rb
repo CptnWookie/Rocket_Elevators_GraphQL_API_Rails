@@ -16,24 +16,26 @@ module Types
     field :address_id, Integer, null: true
  
 
-  #  # #  join Costumers and get one only item
+  ###  join Costumers and get one only item
    field :customer, Types::CustomerType, null:true
 
    def customer
-    Customer.where(id: object.customer_id)[0]
+    Customer.where(id: object.customer_id).first
    end
 
-    # # #  join Factintervention and get one only item
-    # field :factintervention, Types::FactInterventionType, null:true
+    #  join Factintervention and get one only item
+    field :fact_interventions, [Types::FactInterventionType], null: false    
+    def fact_interventions      
+      object.fact_interventions   
+      # FactIntervention.where(building_id: object.id)   
+    end
 
-    # def factintervention
-    #   FactIntervention.where(id: object.customer_id)
-    # end
+  
 
-  #  # #  join adress and get one only item
+    ###  join adress and get one only item
     field :address, Types::AddressType, null:true
     def address
-    Address.where(id: object.address_id)[0]
+    Address.where(id: object.address_id).first
     end
 
 

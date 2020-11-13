@@ -14,4 +14,6 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :address_id, Integer, null: true
   end
+
+  
 end

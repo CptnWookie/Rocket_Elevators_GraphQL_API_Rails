@@ -32,7 +32,7 @@ module Types
      field :address, Types::AddressType, null:true
 
     def address
-     Address.where(id: object.building_id)[0]
+     Address.where(id: object.building_id).first
     end
 
 
