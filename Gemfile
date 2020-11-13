@@ -50,6 +50,3 @@ gem 'graphql'
 gem 'mysql2'
 
 gem 'pg'
-
-gem 'figaro'
-

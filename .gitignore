@@ -88,4 +88,3 @@ yarn-debug.log*
 .env
 
 # Ignore application configuration
-/config/application.yml
