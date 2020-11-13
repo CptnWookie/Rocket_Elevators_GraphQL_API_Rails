@@ -43,6 +43,14 @@ module Types
       FactIntervention.all
     end
 
+    field :fact_interventions, Types::FactInterventionType, null: false do
+      argument :id, ID, required: true
+    end
+
+    def fact_interventions(id:)
+      FactIntervention.find(id)
+    end
+
     field :building, [Types::BuildingType], null: false
 
     def building
@@ -72,6 +80,8 @@ module Types
     def battery
       Battery.all
     end
+
+
     
     
   end
