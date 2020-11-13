@@ -40,6 +40,8 @@ pickle-email-*.html
 # TODO Comment out this rule if you are OK with secrets being uploaded to the repo
 config/initializers/secret_token.rb
 config/master.key
+config/database.yml
+config/dwh_db.yml
 
 config/database.yml
 config/dwh_db.yml
@@ -87,3 +89,6 @@ yarn-debug.log*
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
+.env
+
+
