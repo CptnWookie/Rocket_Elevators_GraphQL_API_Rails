@@ -86,3 +86,6 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 .env
+
+# Ignore application configuration
+/config/application.yml
