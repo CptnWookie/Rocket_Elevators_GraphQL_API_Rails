@@ -21,6 +21,10 @@ module Types
      Customer.where(id: object.customer_id)[0]
    end
   
+   field :address, Types::AddressType, null:true
+    def address
+    Address.where(id: object.address_id).first
+    end
   
   
   end
