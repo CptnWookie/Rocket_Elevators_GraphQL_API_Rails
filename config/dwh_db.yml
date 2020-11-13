@@ -9,7 +9,7 @@ default: &default
   username: <% ENV['USERNAME'] %>
   password: <% ENV['PASSWORD'] %>
   host: <% ENV['POSTGRES_HOST'] %>
-  #port: ENV['POSTGRES_PORT'] %>
+  port: <% ENV['POSTGRES_PORT'] %>
 
 development:
   <<: *default
