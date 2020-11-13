@@ -14,7 +14,5 @@ module Types
     def fact_interventions      
       object.fact_interventions   
     end
-
-    
   end
 end

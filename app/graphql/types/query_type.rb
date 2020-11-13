@@ -115,5 +115,3 @@ module Types
     # ###
   end
 end
-
-

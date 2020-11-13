@@ -1,43 +1,24 @@
-
-# default: &default
-#   adapter: postgresql
-#   encoding: unicode
-
-#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-# development:
-#   <<: *default
-#   database: dwh_development
- 
-# test:
-#   <<: *default
-#   database: dwh_test
-
-# production:
-#   <<: *default
-#   database: dwh_production
-#   username: dwh
-#   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
-
 default: &default
-  adapter: postgresql
-  encoding: unicode
+  # adapter: postgresql
+  # encoding: unicode
+  # username: codeboxx
+  # password: Codeboxx1!
+  # host: codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com
+  adapter: <% ENV['POSTGRES_ADAPTER'] %>
+  encoding: <% ENV['POSTGRES_ENCODING'] %>
+  username: <% ENV['USERNAME'] %>
+  password: <% ENV['PASSWORD'] %>
+  host: <% ENV['POSTGRES_HOST'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
 development:
   <<: *default
-  host: 127.0.0.1
-  port: 5432
-  database: dwh_development
-  username: frimina
-  password: frimina 
+  database: <% ENV['POSTGRES_DB'] %>
+
 test:
   <<: *default
-  database: dwh_test
-  host: 127.0.0.1
-  port: 5432
-  username: frimina
-  password: frimina
+  database: <% ENV['POSTGRES_DB'] %>
+
 production:
   <<: *default
-  database: dwh_production
-  username: dwh
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  database: <% ENV['POSTGRES_DB'] %>
