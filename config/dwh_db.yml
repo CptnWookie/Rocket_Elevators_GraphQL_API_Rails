@@ -1,43 +1,19 @@
-
-# default: &default
-#   adapter: postgresql
-#   encoding: unicode
-
-#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-# development:
-#   <<: *default
-#   database: dwh_development
- 
-# test:
-#   <<: *default
-#   database: dwh_test
-
-# production:
-#   <<: *default
-#   database: dwh_production
-#   username: dwh
-#   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
-
 default: &default
   adapter: postgresql
   encoding: unicode
+  username: codeboxx
+  password: Codeboxx1!
+  host: codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
 development:
   <<: *default
-  host: 127.0.0.1
-  port: 5432
-  database: dwh_development
-  username: frimina
-  password: frimina 
+  database: ALeblanc_dwh
+
 test:
   <<: *default
-  database: dwh_test
-  host: 127.0.0.1
-  port: 5432
-  username: frimina
-  password: frimina
+  database: ALeblanc_dwh
+
 production:
   <<: *default
-  database: dwh_production
-  username: dwh
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  database: ALeblanc_dwh
