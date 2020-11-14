@@ -1,24 +1,34 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: codeboxx
   password: Codeboxx1!
   host: codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com
   # adapter: <% ENV['POSTGRES_ADAPTER'] %>
   # encoding: <% ENV['POSTGRES_ENCODING'] %>
+  # username: postgres
+  # password: root
+  # host: localhost
   # username: <% ENV['USERNAME'] %>
   # password: <% ENV['PASSWORD'] %>
   # host: <% ENV['POSTGRES_HOST'] %>
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: <% ENV['POSTGRES_DB'] %>
+  # database: dwh_development
+  database: ALeblanc_dwh
+  #database: <% ENV['POSTGRES_DB'] %>
 
 test:
   <<: *default
-  database: <% ENV['POSTGRES_DB'] %>
+  # database: dwh_development
+  database: ALeblanc_dwh
+  #database: <% ENV['POSTGRES_DB'] %>
 
 production:
   <<: *default
-  database: <% ENV['POSTGRES_DB'] %>
+  # database: dwh_development
+  database: ALeblanc_dwh
+  #database: <% ENV['POSTGRES_DB'] %>
