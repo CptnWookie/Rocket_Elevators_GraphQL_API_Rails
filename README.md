@@ -29,7 +29,7 @@ To see these different requests we advise you to download the postman applicatio
 
 Here is the link to download postman : [POSTMAN](https://www.postman.com/)
 
-The link to access the postman collection of our workspace : https://www.postman.com/collections/9aef3fc4426d0b8a2a5a
+The link to access the postman collection of our workspace : [collection](https://www.postman.com/collections/9aef3fc4426d0b8a2a5a)
 
 select the collection, select the body button and copy/past these different requests : 
 
