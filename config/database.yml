@@ -1,8 +1,8 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  # username: codeboxx
-  # password: Codeboxx1!
+  username: codeboxx
+  password: Codeboxx1!
   host: codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com
   port: 3306
   # adapter: <% ENV['MYSQL_ADAPTER'] %>
@@ -11,8 +11,8 @@ default: &default
   # password: root
   # host: localhost
   # port: 3306
-  username: <% ENV['USERNAME'] %>
-  password: <% ENV['PASSWORD'] %>
+  # username: <% ENV['USERNAME'] %>
+  # password: <% ENV['PASSWORD'] %>
   # host: <% ENV['MYSQL_HOST'] %>
   # port: <% ENV['MYSQL_PORT'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
