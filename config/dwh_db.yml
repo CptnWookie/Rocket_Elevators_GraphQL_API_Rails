@@ -3,8 +3,8 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   # username: codeboxx
-  password: Codeboxx1!
-  host: codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com
+  # password: Codeboxx1!
+  # host: codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com
   # adapter: <% ENV['POSTGRES_ADAPTER'] %>
   # encoding: <% ENV['POSTGRES_ENCODING'] %>
   # username: postgres
