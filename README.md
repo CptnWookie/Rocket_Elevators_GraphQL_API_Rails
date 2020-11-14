@@ -16,9 +16,22 @@
 - user : `admin@admin.com`
 - password : `admin123`
 
+This week, we worked on graphql to make requests, it is a more suitable technology to restore the data coming 
+from two separate data sources in the same request. Thoses sources are : 
+
+- The Postgres decision database
+- The MySQL operational database
+
+
+To see these different requests we advise you to download the postman application which allows collaboration on APIs.
+
 Here is the link to download postman : [POSTMAN](https://www.postman.com/)
 
-Retrieving the address of the building, the beginning and the end of the intervention for a specific intervention. : 
+The link to access the postman collection of our workspace : https://www.postman.com/collections/9aef3fc4426d0b8a2a5a
+
+select the collection, select the body button and copy/past these different requests : 
+
+For retrieving the address of the building, the beginning and the end of the intervention for a specific intervention :  
 
 ```sh
 Query 1:
