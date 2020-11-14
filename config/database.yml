@@ -1,30 +1,22 @@
-default: &default
-  adapter: mysql2
-  encoding: utf8
-  # username: codeboxx
-  # password: Codeboxx1!
-  # host: codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com
-  # port: 3306
-  # username: root
-  # password: root
-  # host: localhost
-  # port: 3306
-  username: <%= ENV['USERNAME'] %>
-  password: <%= ENV['PASSWORD'] %>
-  host: <%= ENV['MYSQL_HOST'] %>
-  port: <%= ENV['MYSQL_PORT'] %>
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+# default: &default
+#   adapter: mysql2
+#   encoding: utf8
+#   username: <%= ENV['USERNAME'] %>
+#   password: <%= ENV['PASSWORD'] %>
+#   host: <%= ENV['MYSQL_HOST'] %>
+#   port: <%= ENV['MYSQL_PORT'] %>
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   
-development:
-  <<: *default
-  database: <%= ENV['MYSQL_DB'] %>
+# development:
+#   <<: *default
+#   database: <%= ENV['MYSQL_DB'] %>
 
-test:
-  <<: *default
-  database: app_test
+# test:
+#   <<: *default
+#   database: app_test
 
-production:
-  <<: *default
-  database: app_production
-  username: app
-  password: <%= ENV['USERSTEST_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: app_production
+#   username: app
+#   password: <%= ENV['USERSTEST_DATABASE_PASSWORD'] %>
