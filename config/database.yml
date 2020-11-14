@@ -20,7 +20,7 @@ default: &default
 development:
   <<: *default
   database: Alexandre_Leblanc
-  database: <% ENV['MYSQL_DB'] %>
+  # database: <% ENV['MYSQL_DB'] %>
 
 test:
   <<: *default
