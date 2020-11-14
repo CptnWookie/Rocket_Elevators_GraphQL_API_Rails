@@ -11,6 +11,7 @@
 - **[Saad eddine](https://github.com/saadeddinne)**
 
 
+
 **Here is the information you must enter in the sign in page to access the BackOffice :**
 
 - user : `admin@admin.com`
@@ -22,6 +23,7 @@ from two separate data sources in the same request. Thoses sources are :
 - The Postgres decision database
 - The MySQL operational database
 
+The graphql was deployed on Heroku : [HEROKU](https://devcenter.heroku.com/articles/getting-started-with-rails5)
 
 To see these different requests we advise you to download the postman application which allows collaboration on APIs.
 
